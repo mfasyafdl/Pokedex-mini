@@ -29,8 +29,8 @@ function FavoritesPage() {
       {favorites.length === 0 ? (
         <EmptyState
           title="No Favorites Yet"
-          message="Start exploring the Pokémon Library and click the heart icon on any Pokémon to save your favorites here."
-          actionText="Explore Pokémon"
+          message="Browse the Pokémon collection and click the heart icon on any Pokémon to save your favorites here."
+          actionText="Browse Pokémon"
           actionTo="/"
         />
       ) : (

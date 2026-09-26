@@ -12,7 +12,7 @@ function AboutPage() {
         <span className="hero-pill">Project Overview</span>
         <h1 className="page-title">About Pokémon Library</h1>
         <p className="about-intro">
-          Pokémon Library is an interactive, modern digital encyclopedia engineered with React, React Router, and the open-source PokéAPI.
+          Pokédex Mini is an interactive, modern digital database engineered with React, React Router, and the open-source PokéAPI.
         </p>
       </div>
 
@@ -27,7 +27,7 @@ function AboutPage() {
           </div>
           <h3>Comprehensive Database</h3>
           <p>
-            Explore Pokémon across all generations. Access detailed physical profiles, base battle stats, official artwork, and species classifications.
+            Browse Pokémon across all generations. Access detailed physical profiles, base battle stats, official artwork, and species classifications.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ function AboutPage() {
 
       <div className="about-cta">
         <Link to="/" className="btn btn-primary">
-          <span>Explore the Library</span>
+          <span>Open Library</span>
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14" />
             <path d="m12 5 7 7-7 7" />

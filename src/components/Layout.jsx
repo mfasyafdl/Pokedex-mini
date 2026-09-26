@@ -66,8 +66,7 @@ function Layout() {
               </svg>
             </div>
             <div className="brand-text">
-              <span className="brand-title">Pokémon Library</span>
-              <span className="brand-subtitle">Explore. Discover. Collect Knowledge.</span>
+              <span className="brand-title">Pokédex Mini</span>
             </div>
           </Link>
 
@@ -151,7 +150,7 @@ function Layout() {
       <footer className="app-footer">
         <div className="footer-inner">
           <p className="footer-copy">
-            <strong>Pokémon Library</strong> — Digital Pokémon Encyclopedia & Reference.
+            <strong>Pokédex Mini</strong> — Modern Pokémon Database &amp; Reference.
           </p>
           <p className="footer-credit">
             Data sourced from <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">PokéAPI</a>. Pokémon and Pokémon character names are trademarks of Nintendo.

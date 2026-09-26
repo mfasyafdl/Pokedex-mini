@@ -7,14 +7,11 @@ function ListPage() {
       {/* Hero Section */}
       <section className="hero-banner">
         <div className="hero-content">
-          <div className="hero-badge-wrap">
-            <span className="hero-pill">Digital Encyclopedia</span>
-          </div>
           <h1 className="hero-title">
-            Explore the World of <span className="text-highlight">Pokémon</span>
+            Pokédex <span className="text-highlight">Collection</span>
           </h1>
           <p className="hero-description">
-            Discover Pokémon across all generations. Examine their official stats, learn their moves, inspect their abilities, and trace evolutionary paths.
+            Browse Pokémon across all generations. View official stats, examine innate abilities, and trace complete evolutionary lineages.
           </p>
 
           <SearchForm />

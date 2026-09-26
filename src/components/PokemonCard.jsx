@@ -43,7 +43,7 @@ function PokemonCard({ pokemon, id }) {
           </div>
         ) : (
           <div className="pokemon-card-action">
-            <span>Explore Details</span>
+            <span>View Details</span>
             <span className="action-arrow">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
