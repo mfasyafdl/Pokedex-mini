@@ -9,7 +9,6 @@ import {
 import TypeBadge from "../components/TypeBadge.jsx";
 import StatBar from "../components/StatBar.jsx";
 import AbilityList from "../components/AbilityList.jsx";
-import MoveList from "../components/MoveList.jsx";
 import EvolutionChain from "../components/EvolutionChain.jsx";
 import FavoriteButton from "../components/FavoriteButton.jsx";
 import { DetailSkeleton } from "../components/LoadingSkeleton.jsx";
@@ -45,7 +44,7 @@ function DetailPage() {
 
         const data = await response.json();
 
-        // Also fetch species data for genus ("The Mouse Pokémon"), capture rate, growth rate
+        // Also fetch species data for genus, capture rate, growth rate, flavor text
         let speciesData = null;
         if (data.species?.url) {
           try {
@@ -140,7 +139,13 @@ function DetailPage() {
       {/* Top Action Bar */}
       <div className="detail-nav-bar">
         <Link to="/" className="back-link">
-          <span className="back-arrow">←</span> Back to Library
+          <span className="back-arrow">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12" />
+              <polyline points="12 19 5 12 12 5" />
+            </svg>
+          </span>
+          <span>Back to Library</span>
         </Link>
         <FavoriteButton pokemon={pokemon} className="detail-fav-btn" />
       </div>
@@ -245,7 +250,7 @@ function DetailPage() {
         </div>
       </section>
 
-      {/* Abilities Section */}
+      {/* Innate Abilities Section */}
       <AbilityList abilities={pokemon.abilities} />
 
       {/* Evolution Chain Section */}
@@ -253,9 +258,6 @@ function DetailPage() {
         speciesUrl={pokemon.species?.url}
         currentName={pokemon.name}
       />
-
-      {/* Moves Section */}
-      <MoveList moves={pokemon.moves} />
 
       {/* Previous / Next Navigation Footer */}
       <div className="detail-footer-pagination">
@@ -265,7 +267,12 @@ function DetailPage() {
             className="pagination-btn prev-btn"
             onClick={() => navigate(`/pokemon/${prevId}`)}
           >
-            <span className="pag-arrow">←</span>
+            <span className="pag-arrow">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12" />
+                <polyline points="12 19 5 12 12 5" />
+              </svg>
+            </span>
             <div className="pag-text">
               <span className="pag-subtitle">Previous</span>
               <span className="pag-title">{formatPokemonId(prevId)}</span>
@@ -284,7 +291,12 @@ function DetailPage() {
             <span className="pag-subtitle">Next</span>
             <span className="pag-title">{formatPokemonId(nextId)}</span>
           </div>
-          <span className="pag-arrow">→</span>
+          <span className="pag-arrow">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
         </button>
       </div>
     </div>

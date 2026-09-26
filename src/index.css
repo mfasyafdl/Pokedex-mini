@@ -356,8 +356,17 @@ button {
   position: absolute;
   right: 14px;
   color: var(--text-muted);
-  font-size: 0.9rem;
-  padding: 4px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+}
+
+.search-clear-btn:hover {
+  color: var(--text-main);
+  background: var(--bg-card-subtle);
 }
 
 .btn-search {
@@ -961,16 +970,19 @@ button {
 }
 
 .ability-card {
-  background: var(--bg-card-subtle);
+  background: #ffffff;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 12px 16px;
-  cursor: pointer;
+  padding: 16px 18px;
+  cursor: default;
   transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .ability-card:hover {
-  border-color: var(--brand-red);
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
 .ability-header {
@@ -978,45 +990,56 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ability-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .ability-name {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
+}
+
+.ability-slot-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
 }
 
 .hidden-badge {
   font-size: 0.68rem;
   font-weight: 800;
   text-transform: uppercase;
-  background: #e2e8f0;
-  color: #475569;
-  padding: 2px 6px;
+  background: #fef3c7;
+  color: #b45309;
+  padding: 2px 8px;
   border-radius: var(--radius-full);
-}
-
-.ability-toggle-icon {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-
-.ability-content {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e2e8f0;
+  letter-spacing: 0.03em;
 }
 
 .ability-description {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
-.ability-loading {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+.load-more-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 /* Evolution Chain */

@@ -2,12 +2,11 @@ import { useState, useEffect } from "react";
 import { isFavorite, toggleFavorite } from "../utils.js";
 
 function FavoriteButton({ pokemon, className = "" }) {
-  const [favorite, setFavorite] = useState(false);
+  const [favorite, setFavorite] = useState(() =>
+    pokemon ? isFavorite(pokemon.id || pokemon.name) : false
+  );
 
   useEffect(() => {
-    if (pokemon) {
-      setFavorite(isFavorite(pokemon.id || pokemon.name));
-    }
 
     function handleSync() {
       if (pokemon) {

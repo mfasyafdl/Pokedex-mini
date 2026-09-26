@@ -37,16 +37,32 @@ function Layout() {
             <div className="brand-icon-wrap">
               <svg
                 className="pokeball-svg"
-                viewBox="0 0 24 24"
-                width="30"
-                height="30"
-                fill="none"
+                viewBox="0 0 100 100"
+                width="34"
+                height="34"
               >
-                <circle cx="12" cy="12" r="10" stroke="#ef4444" strokeWidth="2.5" fill="#ffffff" />
-                <path d="M2 12H22" stroke="#1e293b" strokeWidth="2.5" />
-                <path d="M2 12A10 10 0 0 1 22 12" fill="#ef4444" />
-                <circle cx="12" cy="12" r="3.5" stroke="#1e293b" strokeWidth="2.5" fill="#ffffff" />
-                <circle cx="12" cy="12" r="1.5" fill="#1e293b" />
+                <defs>
+                  <linearGradient id="headerPokeRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ff4d4d" />
+                    <stop offset="60%" stopColor="#ef4444" />
+                    <stop offset="100%" stopColor="#b91c1c" />
+                  </linearGradient>
+                  <linearGradient id="headerPokeWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#ffffff" />
+                    <stop offset="70%" stopColor="#f8fafc" />
+                    <stop offset="100%" stopColor="#cbd5e1" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="46" fill="#0f172a" />
+                <path d="M 6 50 A 44 44 0 0 1 94 50 Z" fill="url(#headerPokeRed)" />
+                <path d="M 16 44 A 36 36 0 0 1 84 44 A 44 44 0 0 0 16 44 Z" fill="#ffffff" opacity="0.35" />
+                <path d="M 6 50 A 44 44 0 0 0 94 50 Z" fill="url(#headerPokeWhite)" />
+                <rect x="4" y="46" width="92" height="8" fill="#0f172a" />
+                <circle cx="50" cy="50" r="15" fill="#0f172a" />
+                <circle cx="50" cy="50" r="11" fill="#ffffff" />
+                <circle cx="50" cy="50" r="7" fill="#0f172a" />
+                <circle cx="50" cy="50" r="5" fill="#f8fafc" />
+                <circle cx="48" cy="48" r="1.8" fill="#ffffff" />
               </svg>
             </div>
             <div className="brand-text">
