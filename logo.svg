@@ -1,55 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
   <defs>
-    <!-- Top red hemisphere gradient -->
     <linearGradient id="pokeRed" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff4d4d" />
       <stop offset="50%" stop-color="#ef4444" />
       <stop offset="100%" stop-color="#b91c1c" />
     </linearGradient>
 
-    <!-- Bottom white hemisphere gradient -->
     <linearGradient id="pokeWhite" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="60%" stop-color="#f8fafc" />
       <stop offset="100%" stop-color="#cbd5e1" />
     </linearGradient>
 
-    <!-- Center core glow -->
     <radialGradient id="buttonGlow" cx="35%" cy="35%" r="65%">
       <stop offset="0%" stop-color="#ffffff" />
       <stop offset="60%" stop-color="#e2e8f0" />
       <stop offset="100%" stop-color="#94a3b8" />
     </radialGradient>
 
-    <!-- Outer shadow -->
     <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.15" />
     </filter>
   </defs>
 
-  <!-- Outer Ball Shadow/Base -->
   <g filter="url(#softGlow)">
-    <!-- Ball Boundary -->
     <circle cx="50" cy="50" r="46" fill="#0f172a" />
-
-    <!-- Top Half (Red) -->
     <path d="M 6 50 A 44 44 0 0 1 94 50 Z" fill="url(#pokeRed)" />
-
-    <!-- Glossy Highlight on Top Dome -->
     <path d="M 16 44 A 36 36 0 0 1 84 44 A 44 44 0 0 0 16 44 Z" fill="#ffffff" opacity="0.3" />
-
-    <!-- Bottom Half (White) -->
     <path d="M 6 50 A 44 44 0 0 0 94 50 Z" fill="url(#pokeWhite)" />
-
-    <!-- Horizontal Center Divider Belt -->
     <rect x="4" y="46" width="92" height="8" fill="#0f172a" />
-
-    <!-- Center Button Outer Ring -->
     <circle cx="50" cy="50" r="16" fill="#0f172a" />
     <circle cx="50" cy="50" r="12" fill="#ffffff" />
     <circle cx="50" cy="50" r="8" fill="#0f172a" />
     <circle cx="50" cy="50" r="6" fill="url(#buttonGlow)" />
-    <!-- Center Button Specular Highlight -->
     <circle cx="48" cy="48" r="2" fill="#ffffff" />
   </g>
 </svg>
